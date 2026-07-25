@@ -17,7 +17,7 @@
   --gray-100: #eef1f5;
   --gray-200: #e2e6ec;
   --gray-400: #9aa4b2;
-  --gray-500: #6b7688;
+  --gray-500: #5c6678;
   --gray-700: #3d4658;
   --white: #ffffff;
 
@@ -37,6 +37,21 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 2000;
+  background: var(--navy-950);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 12px; }
 
 html { scroll-behavior: smooth; }
 
@@ -126,6 +141,18 @@ svg { width: 100%; height: 100%; }
   color: var(--white);
 }
 
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.35);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
+
 .btn-block { width: 100%; justify-content: center; }
 
 .btn-nav { padding: 11px 22px; font-size: 0.88rem; }
@@ -163,7 +190,7 @@ svg { width: 100%; height: 100%; }
   flex-shrink: 0;
   transition: color var(--transition);
 }
-.logo span { color: var(--orange-400, var(--orange-500)); }
+.logo span { color: var(--orange-500); }
 .site-header.scrolled .logo { color: var(--navy-950); }
 
 .main-nav ul {
@@ -315,6 +342,21 @@ svg { width: 100%; height: 100%; }
   margin-bottom: 34px;
 }
 
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 2px;
+  transition: var(--transition);
+}
+.cv-link svg { width: 16px; height: 16px; }
+.cv-link:hover { color: var(--orange-300); border-color: var(--orange-300); }
+
 .hero-badge {
   display: flex;
   align-items: center;
@@ -333,7 +375,7 @@ svg { width: 100%; height: 100%; }
 .hero-badge .icon {
   width: 26px; height: 26px;
   flex-shrink: 0;
-  color: var(--orange-400, var(--orange-500));
+  color: var(--orange-500);
 }
 
 .hero-visual {
